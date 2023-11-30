@@ -41,7 +41,10 @@ import {
     VisualMapComponent,
     type VisualMapComponentOption,
     GeoComponent,
-    type GeoComponentOption
+    type GeoComponentOption,
+    //数据拉伸相关
+    DataZoomComponent,
+    type DataZoomComponentOption,
 } from 'echarts/components';
 // 标签自动布局，全局过渡动画等特性
 import { LabelLayout, UniversalTransition } from "echarts/features";
@@ -66,7 +69,8 @@ export type EChartsOption = echarts.ComposeOption<
   EffectScatterSeriesOption |
   ScatterSeriesOption |
   VisualMapComponentOption |
-  GeoComponentOption
+  GeoComponentOption |
+  DataZoomComponentOption
 >;
 
 // 注册必须的组件
@@ -95,7 +99,9 @@ echarts.use(
         ScatterChart,
         //地图相关
         VisualMapComponent,
-        GeoComponent  
+        GeoComponent,
+        //数据拉伸相关
+        DataZoomComponent,  
     ]
 );
 

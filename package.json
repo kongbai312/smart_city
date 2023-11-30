@@ -29,6 +29,7 @@
     "@vue/tsconfig": "^0.4.0",
     "eslint": "^8.49.0",
     "eslint-plugin-vue": "^9.17.0",
+    "lib-flexible": "^0.3.2",
     "npm-run-all2": "^6.1.1",
     "postcss-px-to-viewport-8-plugin": "^1.2.3",
     "prettier": "^3.0.3",

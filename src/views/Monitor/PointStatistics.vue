@@ -3,18 +3,18 @@
     <div class="inner">
         <!-- 标题 -->
         <h3 class="title">点位分布统计</h3>
-        <!-- 图标 -->
+        <!-- 图表 -->
         <div class="echarts">
             <!-- 饼状图 -->
-            <div class="echarts_main"></div>
+            <div class="echarts_point_main"></div>
             <!-- 数据 -->
             <div class="data">
                 <div class="dataItem">
-                    <span class="number">{{processNum(32011)}}</span>
+                    <h4 class="number">{{processNum(32011)}}</h4>
                     <span class="text"><i class="icon-dot"></i>点位总数</span>
                 </div>
                 <div class="dataItem">
-                    <span class="number">{{processNum(418)}}</span>
+                    <h4 class="number">{{processNum(418)}}</h4>
                     <span class="text"><i class="icon-dot"></i>本月新增</span>
                 </div>
             </div>
@@ -25,7 +25,7 @@
 
 <script setup lang='ts'>
 import  type { EChartsOption } from '@/utils/echarts.ts';
-import { processNum } from '@/hooks';
+import { processNum , initEcharts } from '@/hooks';
     //引入echarts
     const echarts = inject<any>('$echarts')
 
@@ -99,21 +99,8 @@ import { processNum } from '@/hooks';
     };
 
     //初始化echarts
-    const initEcharts = () => {
-        //获取Dom对象
-        let echarsDom = document.getElementsByClassName('echarts_main')[0]!
-        // 实例
-        let myChart = echarts.init(echarsDom)
-        //配置
-        myChart.setOption(option)
-        // 根据页面大小自动响应图表大小
-        window.addEventListener("resize", function () {
-            myChart.resize();
-        });
-    }
-
     onMounted(() => {
-        initEcharts()
+        initEcharts(echarts,option,'echarts_point_main')
     })
 </script>
 
@@ -131,22 +118,23 @@ import { processNum } from '@/hooks';
                 color: #fff;
             }
             .echarts{
-                flex: 1;
+                margin-top: 24px;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                .echarts_main{
+                .echarts_point_main{
                     width: 312px;
                     height: 240px;
+                    margin-left: -10px;
                 }
                 .data{
-                    box-sizing: border-box;
-                    width: 170px;
-                    height: 240px;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
-                    padding: 35px 30px;
+                    width: 168px;
+                    height: 100%;
+                    padding: 36px 30px;
+                    box-sizing: border-box;
                     background: url(../../assets/images/rect.png) no-repeat;
                     background-size: cover;
                     background-position: center;
@@ -160,7 +148,7 @@ import { processNum } from '@/hooks';
                             color: #eacf19;
                         }
                         .number {
-                            font-size: 24px;
+                            font-size: 28px;
                             color: #fff;
                             margin-bottom: 12px;
                         }

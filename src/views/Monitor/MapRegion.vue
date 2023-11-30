@@ -11,7 +11,7 @@
 
 <script setup lang='ts'>
 import 'echarts/china.js';
-import  type { EChartsOption } from '@/utils/echarts.ts';
+import { initEcharts } from '@/hooks';
 //引入echarts
 const echarts = inject<any>('$echarts')
 
@@ -416,25 +416,9 @@ let option = {
     series: series,
 };
 
-
-
-
 //初始化echarts
-const initEcharts = () => {
-    //获取Dom对象
-    let echarsDom = document.getElementsByClassName('echarts_map_main')[0]!
-    // 实例
-    let myChart = echarts.init(echarsDom)
-    //配置
-    option && myChart.setOption(option)
-    // 根据页面大小自动响应图表大小
-    window.addEventListener("resize", function () {
-        myChart.resize();
-    })
-}
-
 onMounted(() => {
-    initEcharts()
+    initEcharts(echarts,option,'echarts_map_main')
 })
 
 </script>
@@ -442,12 +426,13 @@ onMounted(() => {
 <style lang="scss" scoped>
 .map_region {
     height: 578px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
 
     //标题
     .header {
-        padding: 10px 0;
+        padding: 16px 0;
         color: #fff;
         font-size: 20px;
 

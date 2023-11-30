@@ -1,5 +1,5 @@
 <template>
-  <div class="monitor">
+  <div class="monitor monitor_size_px">
     
     <!-- 内容部分 -->
     <div class="container">
@@ -25,13 +25,10 @@
       <div class="right"></div>
     </div>
 
-    <!-- 路由挂载点 -->
-    <!-- <RouterView /> -->
   </div>
 </template>
 
 <script setup lang='ts'>
-//    import { RouterView } from 'vue-router';
 import DeviceCount from './DeviceCount.vue';
 import FaultyEquipment from './FaultyEquipment.vue';
 import PointStatistics from './PointStatistics.vue';
@@ -40,12 +37,14 @@ import UserStatistics from './UserStatistics.vue';
 </script>
 
 <style lang="scss" scoped>
-
-  .monitor{
+  .monitor_size_px{
     min-width: 1024px;
     max-width: 1920px;
     min-height: 780px;
-    padding: 80px 20px 0;
+  }
+
+  .monitor{
+    padding: 88px 20px 0;
     background: url(../../assets/images/logo.png) no-repeat;
     background-size: contain;
     //内容

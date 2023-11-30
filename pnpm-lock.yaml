@@ -48,6 +48,9 @@ devDependencies:
   eslint-plugin-vue:
     specifier: ^9.17.0
     version: registry.npmmirror.com/eslint-plugin-vue@9.17.0(eslint@8.49.0)
+  lib-flexible:
+    specifier: ^0.3.2
+    version: registry.npmmirror.com/lib-flexible@0.3.2
   npm-run-all2:
     specifier: ^6.1.1
     version: registry.npmmirror.com/npm-run-all2@6.1.1
@@ -2002,6 +2005,12 @@ packages:
     dependencies:
       prelude-ls: registry.npmmirror.com/prelude-ls@1.2.1
       type-check: registry.npmmirror.com/type-check@0.4.0
+    dev: true
+
+  registry.npmmirror.com/lib-flexible@0.3.2:
+    resolution: {integrity: sha512-9yowMWA70tKhKdCJDaltY0mNQG4OWo7pWKScnTp9aiSxS7s20ZYlwBRE3335nweOf5qKXVC7sDxJwMPM8/MFZg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lib-flexible/-/lib-flexible-0.3.2.tgz}
+    name: lib-flexible
+    version: 0.3.2
     dev: true
 
   registry.npmmirror.com/lines-and-columns@2.0.4:

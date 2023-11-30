@@ -13,6 +13,9 @@ import '@/styles/variables.scss';
 //引入echarts
 import echarts from '@/utils/echarts';
 
+//引入flexible
+import 'lib-flexible/flexible.js';
+
 const app = createApp(App)
 
 //通过provide传递给子组件

@@ -75,8 +75,9 @@
             .tabs{
                 padding: 0 36px;
                 color: #1950c4;
-                margin-bottom: 10px;
+                margin-bottom: 18px;
                 .text{
+                    font-size: 18px;
                     padding: 0 27px;
                     cursor: pointer;
                 }
@@ -90,8 +91,8 @@
             }
             //内容
             .content{
-                overflow: hidden;
                 flex: 1;
+                overflow: hidden;
                 display: flex;
                 flex-direction: column;
                 //头部
@@ -119,8 +120,6 @@
                 //设备信息
                 .equipment-info{
                     flex: 1;
-                    position: relative;
-                    padding-bottom: 12px;
                     overflow: hidden;
                     .rolling{
                         animation: move 15s linear infinite;
@@ -128,22 +127,26 @@
                             animation-play-state: paused;
                         }
                         .row{
-                            padding: 0 36px;
+                            position: relative;
+                            padding: 12px 36px;
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
-                            line-height: 40px;
                             &:hover{
                                 &{
                                     background-color:  rgba(255, 255, 255, 0.1);
-                                }
-                                & .icon-dot{
-                                    opacity: 1;
+                                    .col{
+                                        color: #68d8fe;
+                                    }
+                                    .icon-dot{
+                                        opacity: 1;
+                                    }
                                 }
                             }
                             .col{
                                 display: inline-block;
                                 font-size: 12px;
+                                color: #61a8ff;
                             }
                             & .col:nth-child(1){
                                 width: 80px;

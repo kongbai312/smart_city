@@ -3,7 +3,7 @@
         <div class="inner">
         <div class="innerItem" v-for="(item,index) in deviceData" :key="index">
             <h4 class="text">{{processNum(item.count)}}</h4>
-            <p class="name"><i class="icon-dot"></i>{{item.name}}</p>
+            <span class="name"><i class="icon-dot"></i>{{item.name}}</span>
         </div>
         </div>
     </div>
@@ -41,11 +41,12 @@ import { processNum } from '@/hooks';
     .inner{
         @include image-border-inner;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         .innerItem{
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
+            justify-content: space-between;
+            align-items: flex-start;
             &:nth-of-type(1) .name i{
                 color: #4c9bfd;
             }
@@ -62,20 +63,17 @@ import { processNum } from '@/hooks';
                 font-size: 28px;
                 color: #fff;
                 text-align: center;
+                font-weight: 400;
+                margin-left: 5px;
             }
             .name{
                 font-size: 16px;
+                color: #4c9bfd;
+                .icon-dot{ 
+                    margin-right: 5px;
+                }
             }
         }
     }
 }    
-
-@media screen and (max-width: 1024px) {
-    .text{
-        font-size: 18px !important;
-    }
-    .name{
-        font-size: 10px !important;
-    }
-}
 </style>
