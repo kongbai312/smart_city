@@ -22,7 +22,10 @@
       </div>
 
       <!-- 右边屏幕 -->
-      <div class="right"></div>
+      <div class="right">
+        <!-- 订单 -->
+        <Order></Order>
+      </div>
     </div>
 
   </div>
@@ -34,6 +37,7 @@ import FaultyEquipment from './FaultyEquipment.vue';
 import PointStatistics from './PointStatistics.vue';
 import MapRegion from './MapRegion.vue';
 import UserStatistics from './UserStatistics.vue';
+import Order from './Order.vue';
 </script>
 
 <style lang="scss" scoped>
@@ -60,7 +64,6 @@ import UserStatistics from './UserStatistics.vue';
       }
       .right{
         flex: 3;
-        background-color: red;
       }
     }
   }
