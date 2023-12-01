@@ -25,6 +25,10 @@
       <div class="right">
         <!-- 订单 -->
         <Order></Order>
+        <!-- 销售额统计 -->
+        <SalesStatistics></SalesStatistics>
+        <!-- 渠道和季度销售 -->
+        <ChannelsAndQuarter></ChannelsAndQuarter>
       </div>
     </div>
 
@@ -38,6 +42,8 @@ import PointStatistics from './PointStatistics.vue';
 import MapRegion from './MapRegion.vue';
 import UserStatistics from './UserStatistics.vue';
 import Order from './Order.vue';
+import SalesStatistics from './SalesStatistics.vue';
+import ChannelsAndQuarter from './ChannelsAndQuarter.vue';
 </script>
 
 <style lang="scss" scoped>

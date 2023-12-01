@@ -1,5 +1,5 @@
 <template>
-    <div class="order_container">
+    <div class="order_container"  @mouseenter="closeTimer" @mouseleave="openTimer">
         <div class="inner">
             <!-- 标签 -->
             <div class="tabs">
@@ -76,23 +76,35 @@ let orderData = ref([
     const autoChange = () => {
         //清除定时器
         timer = null
-        //修改当前时间
-        timeChange(activeTime.value)
+        //判断
         if(activeTime.value < 4){
             activeTime.value ++
         }
         else{
             activeTime.value = 1
         }
+        //修改当前数据
+        timeChange(activeTime.value)
+        //进入下一轮
         timer = setTimeout(autoChange,time)
     }
-    onMounted(() => {
+    //开启定时器
+    const openTimer = () => {
         // 开启定时器
         timer = setTimeout(autoChange,time)
-    })
-    onBeforeUnmount(() => {
+    }
+    //清除定时器
+    const closeTimer = () => {
         //清空定时器
         clearTimeout(timer)
+    }
+    onMounted(() => {
+        //开启定时器
+        openTimer()
+    })
+    onBeforeUnmount(() => {
+        //清除定时器
+        closeTimer()
     })
 </script>
 

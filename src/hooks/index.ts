@@ -17,5 +17,4 @@ export const initEcharts = ( echarts : any , option : any , className : string )
     });
     return myChart
 }
-
     
