@@ -29,6 +29,8 @@
         <SalesStatistics></SalesStatistics>
         <!-- 渠道和季度销售 -->
         <ChannelsAndQuarter></ChannelsAndQuarter>
+        <!-- 全国热榜 -->
+        <HotList></HotList>
       </div>
     </div>
 
@@ -44,6 +46,7 @@ import UserStatistics from './UserStatistics.vue';
 import Order from './Order.vue';
 import SalesStatistics from './SalesStatistics.vue';
 import ChannelsAndQuarter from './ChannelsAndQuarter.vue';
+import HotList from './HotList.vue';
 </script>
 
 <style lang="scss" scoped>

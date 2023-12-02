@@ -13,7 +13,7 @@
 </script>
 
 <style lang="scss" scoped>
-    .channels_quarter{
-        display: flex;
-    }
+  .channels_quarter{
+    display: flex;
+  }
 </style>

@@ -51,9 +51,7 @@ let option = {
             //是否启用防止标签重叠策略
             // avoidLabelOverlap: false,
             labelLine: {
-                normal: {
-                    show: false
-                }
+                show: false
             },
             // 饼形图的起始角度为 180， 注意不是旋转角度
             startAngle: 180,
