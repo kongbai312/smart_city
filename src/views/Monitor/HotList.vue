@@ -241,6 +241,7 @@ import { processNum } from '@/hooks';
                 flex: 1;
                 display: flex;
                 flex-direction: column;
+                justify-content: space-between;
                 margin-top: 14px;
                 margin-bottom: 14px;
                 .dataItem{
